@@ -26,8 +26,8 @@ class Raster:
                 self.driver = driver
                 self.georef = georef
                 self.proj = proj
-                self.x_size = None if data is None  else data.shape[0]
-                self.y_size = None if data is None else data.shape[1]
+                self.x_size = None if data is None  else data.shape[1]
+                self.y_size = None if data is None else data.shape[0]
             else:                   # user define empty raster only has name 
                 if not os.path.isfile(name):
                     self.name = name

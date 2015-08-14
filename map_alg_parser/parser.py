@@ -54,9 +54,10 @@ def read_from_tokens(tokens):
         return atom(token)
 
 def atom(token):
-    "Number became Number, if string is double quoted it is 
+    """ Number became Number, if string is double quoted it is 
     recongnized as Raster file or Kernel file based on whether
-    it has .csv extension, other string is taken as Symbol."
+    it has .csv extension, other string is taken as Symbol.
+    """
     try: return int(token)
     except ValueError:
         try: return float(token)
